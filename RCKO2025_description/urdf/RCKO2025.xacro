@@ -153,9 +153,15 @@
 
 <link name="left_lower_leg_1">
   <inertial>
+<<<<<<< HEAD
     <origin xyz="-0.005650281818702613 0.025822001462742536 -0.06772036929997684" rpy="0 0 0"/>
     <mass value="0.10974623051687926"/>
     <inertia ixx="0.000262" iyy="0.000201" izz="8e-05" ixy="-0.0" iyz="-0.0" ixz="-1.4e-05"/>
+=======
+    <origin xyz="-8.212056945443085e-05 0.02582198317065247 -0.06795536785927819" rpy="0 0 0"/>
+    <mass value="0.1097462305168792"/>
+    <inertia ixx="0.000263" iyy="0.000201" izz="7.9e-05" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
+>>>>>>> parent of 44e5b30 (repush)
   </inertial>
   <visual>
     <origin xyz="0.086132 0.072592 -0.170487" rpy="0 0 0"/>
@@ -174,9 +180,15 @@
 
 <link name="right_lower_leg_1">
   <inertial>
+<<<<<<< HEAD
     <origin xyz="-0.005008387197218772 -0.025566931779343473 -0.0675226987376316" rpy="0 0 0"/>
     <mass value="0.10974623051688356"/>
     <inertia ixx="0.000262" iyy="0.000201" izz="8e-05" ixy="-0.0" iyz="-1e-06" ixz="-1.2e-05"/>
+=======
+    <origin xyz="0.0005403758644122038 -0.025566943522814516 -0.06770626577304717" rpy="0 0 0"/>
+    <mass value="0.10974623051688351"/>
+    <inertia ixx="0.000263" iyy="0.000201" izz="7.9e-05" ixy="0.0" iyz="-1e-06" ixz="3e-06"/>
+>>>>>>> parent of 44e5b30 (repush)
   </inertial>
   <visual>
     <origin xyz="0.087255 -0.072064 -0.170293" rpy="0 0 0"/>
@@ -195,9 +207,15 @@
 
 <link name="left_ankle_pitch_1">
   <inertial>
+<<<<<<< HEAD
     <origin xyz="-0.0012523271413189263 -0.02587212282028315 0.017519682372607585" rpy="0 0 0"/>
     <mass value="0.7617305331247881"/>
     <inertia ixx="0.000377" iyy="0.000355" izz="0.000247" ixy="2e-06" iyz="1e-06" ixz="1.3e-05"/>
+=======
+    <origin xyz="-0.002684447385301289 -0.02587219041070523 0.017358487086665916" rpy="0 0 0"/>
+    <mass value="0.7617305331247872"/>
+    <inertia ixx="0.000374" iyy="0.000355" izz="0.00025" ixy="2e-06" iyz="2e-06" ixz="2.3e-05"/>
+>>>>>>> parent of 44e5b30 (repush)
   </inertial>
   <visual>
     <origin xyz="0.097226 -0.071989 -0.030646" rpy="0 0 0"/>
@@ -216,9 +234,15 @@
 
 <link name="right_ankle_pitch_1">
   <inertial>
+<<<<<<< HEAD
     <origin xyz="-0.0009647138858091819 0.026039726449397026 0.017289135778773165" rpy="0 0 0"/>
     <mass value="0.7617304834003347"/>
     <inertia ixx="0.000378" iyy="0.000355" izz="0.000247" ixy="-2e-06" iyz="-2e-06" ixz="1.1e-05"/>
+=======
+    <origin xyz="-0.002677931766474576 0.02603954060499232 0.017107353866920166" rpy="0 0 0"/>
+    <mass value="0.7617304834003356"/>
+    <inertia ixx="0.000375" iyy="0.000355" izz="0.00025" ixy="-1e-06" iyz="-3e-06" ixz="2.3e-05"/>
+>>>>>>> parent of 44e5b30 (repush)
   </inertial>
   <visual>
     <origin xyz="0.097384 0.072962 -0.03094" rpy="0 0 0"/>
@@ -354,8 +378,13 @@
   <axis xyz="0.996014 -5e-06 -0.089201"/>
 </joint>
 
+<<<<<<< HEAD
 <joint name="rotate_20" type="continuous">
   <origin xyz="-0.038898 -0.024169 0.022933" rpy="0 0 0"/>
+=======
+<joint name="È¸Àü 13" type="continuous">
+  <origin xyz="-0.040647 -0.024169 0.019669" rpy="0 0 0"/>
+>>>>>>> parent of 44e5b30 (repush)
   <parent link="left_ankle_pitch_1"/>
   <child link="left_foot_1"/>
   <axis xyz="0.997442 8.8e-05 -0.071476"/>
