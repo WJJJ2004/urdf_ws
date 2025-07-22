@@ -9,9 +9,9 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
-    share_dir = get_package_share_directory('RCKO2025_description')
+    share_dir = get_package_share_directory('robocup_2025_description')
 
-    xacro_file = os.path.join(share_dir, 'urdf', 'RCKO2025.xacro')
+    xacro_file = os.path.join(share_dir, 'urdf', 'robocup_2025.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_urdf = robot_description_config.toxml()
 
