@@ -122,12 +122,12 @@
   </actuator>
 </transmission>
 
-<transmission name="rotate_20_tran">
+<transmission name="회전 13_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="rotate_20">
+  <joint name="회전 13">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="rotate_20_actr">
+  <actuator name="회전 13_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
