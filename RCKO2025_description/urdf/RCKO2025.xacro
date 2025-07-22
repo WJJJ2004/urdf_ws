@@ -153,8 +153,8 @@
 
 <link name="left_lower_leg_1">
   <inertial>
-    <origin xyz="-8.212056945443085e-05 0.02582198317065247 -0.06795536785927819" rpy="0 0 0"/>
-    <mass value="0.1097462305168792"/>
+    <origin xyz="-8.212056945444864e-05 0.02582198317065245 -0.06795536785927819" rpy="0 0 0"/>
+    <mass value="0.10974623051687926"/>
     <inertia ixx="0.000263" iyy="0.000201" izz="7.9e-05" ixy="0.0" iyz="-0.0" ixz="1e-06"/>
   </inertial>
   <visual>
@@ -174,8 +174,8 @@
 
 <link name="right_lower_leg_1">
   <inertial>
-    <origin xyz="0.0005403758644122038 -0.025566943522814516 -0.06770626577304717" rpy="0 0 0"/>
-    <mass value="0.10974623051688351"/>
+    <origin xyz="0.0005403758644121548 -0.025566943522814564 -0.06770626577304717" rpy="0 0 0"/>
+    <mass value="0.10974623051688354"/>
     <inertia ixx="0.000263" iyy="0.000201" izz="7.9e-05" ixy="0.0" iyz="-1e-06" ixz="3e-06"/>
   </inertial>
   <visual>
@@ -195,7 +195,7 @@
 
 <link name="left_ankle_pitch_1">
   <inertial>
-    <origin xyz="-0.002684447385301289 -0.02587219041070523 0.017358487086665916" rpy="0 0 0"/>
+    <origin xyz="-0.0026844473866839877 -0.025872190410705327 0.0173584870866514" rpy="0 0 0"/>
     <mass value="0.7617305331247872"/>
     <inertia ixx="0.000374" iyy="0.000355" izz="0.00025" ixy="2e-06" iyz="2e-06" ixz="2.3e-05"/>
   </inertial>
@@ -216,8 +216,8 @@
 
 <link name="right_ankle_pitch_1">
   <inertial>
-    <origin xyz="-0.002677931766474576 0.02603954060499232 0.017107353866920166" rpy="0 0 0"/>
-    <mass value="0.7617304834003356"/>
+    <origin xyz="-0.0026779317666337115 0.026039540604992334 0.017107353866918543" rpy="0 0 0"/>
+    <mass value="0.7617304834003363"/>
     <inertia ixx="0.000375" iyy="0.000355" izz="0.00025" ixy="-1e-06" iyz="-3e-06" ixz="2.3e-05"/>
   </inertial>
   <visual>
@@ -354,7 +354,7 @@
   <axis xyz="0.999948 2.7e-05 0.010164"/>
 </joint>
 
-<joint name="È¸Àü 13" type="continuous">
+<joint name="rotate_20" type="continuous">
   <origin xyz="-0.040647 -0.024169 0.019669" rpy="0 0 0"/>
   <parent link="left_ankle_pitch_1"/>
   <child link="left_foot_1"/>
