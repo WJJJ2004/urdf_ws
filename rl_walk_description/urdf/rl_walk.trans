@@ -78,34 +78,12 @@
   </actuator>
 </transmission>
 
-<transmission name="rotate_17_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="rotate_17">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="rotate_17_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-
 <transmission name="rotate_18_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="rotate_18">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rotate_18_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-
-<transmission name="rotate_19_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="rotate_19">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="rotate_19_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
@@ -128,6 +106,28 @@
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rotate_20_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rotate_17_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rotate_17">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rotate_17_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rotate_19_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rotate_19">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rotate_19_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
