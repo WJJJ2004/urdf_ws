@@ -1,0 +1,580 @@
+<?xml version="1.0" ?>
+<robot name="dummy_loadcell" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find dummy_loadcell_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find dummy_loadcell_description)/urdf/dummy_loadcell.trans" />
+<xacro:include filename="$(find dummy_loadcell_description)/urdf/dummy_loadcell.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0017305195924670967 -0.0011629138733599918 0.5010453144335133" rpy="0 0 0"/>
+    <mass value="6.741980846688683"/>
+    <inertia ixx="0.114834" iyy="0.061498" izz="0.064366" ixy="-5e-05" iyz="-0.000844" ixz="-0.004356"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_hipjoint_abd_1">
+  <inertial>
+    <origin xyz="-0.05591451235293073 4.2200876849279867e-07 -0.047054355779525214" rpy="0 0 0"/>
+    <mass value="0.6286646646290869"/>
+    <inertia ixx="0.000289" iyy="0.000482" izz="0.000312" ixy="0.0" iyz="0.0" ixz="-0.000113"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.016264 0.045144 -0.418822" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_hipjoint_abd_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.016264 0.045144 -0.418822" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_hipjoint_abd_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_hipjoint_abd_1">
+  <inertial>
+    <origin xyz="-0.05591451245482693 4.2190017759263787e-07 -0.047053816044921704" rpy="0 0 0"/>
+    <mass value="0.6286646646192796"/>
+    <inertia ixx="0.000289" iyy="0.000482" izz="0.000312" ixy="0.0" iyz="0.0" ixz="-0.000113"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.016264 -0.044856 -0.418822" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_hipjoint_abd_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.016264 -0.044856 -0.418822" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_hipjoint_abd_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_hipjoint_pitch_1">
+  <inertial>
+    <origin xyz="0.03805282855410244 8.617133419139278e-06 -0.002896064422694855" rpy="0 0 0"/>
+    <mass value="0.7994976795430209"/>
+    <inertia ixx="0.000395" iyy="0.000382" izz="0.000267" ixy="-0.0" iyz="-3e-06" ixz="2.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.024676 0.045143 -0.352322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_hipjoint_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.024676 0.045143 -0.352322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_hipjoint_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_hipjoint_pitch_1">
+  <inertial>
+    <origin xyz="0.038052828850308 -9.507087615275023e-06 -0.0028955230110439545" rpy="0 0 0"/>
+    <mass value="0.7994976235700837"/>
+    <inertia ixx="0.000395" iyy="0.000382" izz="0.000267" ixy="0.0" iyz="3e-06" ixz="2.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.024676 -0.044857 -0.352322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_hipjoint_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.024676 -0.044857 -0.352322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_hipjoint_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_middle_leg_1">
+  <inertial>
+    <origin xyz="0.00895709171537248 -0.026013191657981424 -0.11676881863751229" rpy="0 0 0"/>
+    <mass value="0.8322714506735269"/>
+    <inertia ixx="0.000938" iyy="0.000845" izz="0.000339" ixy="2e-06" iyz="3e-06" ixz="-7.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015824 -0.070857 -0.332323" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_middle_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015824 -0.070857 -0.332323" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_middle_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_middle_leg_1">
+  <inertial>
+    <origin xyz="0.008957099903178445 0.026013772490936796 -0.11676836405601473" rpy="0 0 0"/>
+    <mass value="0.8322715098033127"/>
+    <inertia ixx="0.000938" iyy="0.000845" izz="0.000339" ixy="-2e-06" iyz="-3e-06" ixz="-7.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015824 0.071143 -0.332322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_middle_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015824 0.071143 -0.332322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_middle_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_lower_leg_1">
+  <inertial>
+    <origin xyz="-0.0001887446404426306 -0.025998260358678596 -0.0678871453539575" rpy="0 0 0"/>
+    <mass value="0.10974623051687235"/>
+    <inertia ixx="0.000263" iyy="0.000201" izz="7.9e-05" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015824 -0.070858 -0.192323" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015824 -0.070858 -0.192323" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_ankle_pitch_1">
+  <inertial>
+    <origin xyz="-0.0024472821427351157 -0.02600905655481872 0.017103477010797334" rpy="0 0 0"/>
+    <mass value="0.7994976235700851"/>
+    <inertia ixx="0.000395" iyy="0.000382" izz="0.000267" ixy="0.0" iyz="3e-06" ixz="2.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015825 -0.070859 -0.052323" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_ankle_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015825 -0.070859 -0.052323" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_ankle_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_foot_1">
+  <inertial>
+    <origin xyz="0.0046685277595720776 -0.005778178565592873 -0.03625923139320491" rpy="0 0 0"/>
+    <mass value="1.0884519024049462"/>
+    <inertia ixx="0.001203" iyy="0.002956" izz="0.002851" ixy="0.000171" iyz="-0.000144" ixz="0.000613"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.024675 0.045143 -0.072322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.024675 0.045143 -0.072322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_foot_1">
+  <inertial>
+    <origin xyz="0.004668525882978138 0.005778896074666702 -0.03625860670027754" rpy="0 0 0"/>
+    <mass value="1.0884519419865217"/>
+    <inertia ixx="0.001203" iyy="0.002956" izz="0.002851" ixy="-0.000171" iyz="0.000144" ixz="0.000613"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.024675 -0.044859 -0.072322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.024675 -0.044859 -0.072322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/left_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_lower_leg_1">
+  <inertial>
+    <origin xyz="-0.000188744679481552 0.026001260655841914 -0.0678866850364557" rpy="0 0 0"/>
+    <mass value="0.10974623051687242"/>
+    <inertia ixx="0.000263" iyy="0.000201" izz="7.9e-05" ixy="-0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015824 0.071143 -0.192322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015824 0.071143 -0.192322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_ankle_pitch_1">
+  <inertial>
+    <origin xyz="-0.002447282489473745 0.026009250564086622 0.017103935580121625" rpy="0 0 0"/>
+    <mass value="0.7994976795430198"/>
+    <inertia ixx="0.000395" iyy="0.000382" izz="0.000267" ixy="-0.0" iyz="-3e-06" ixz="2.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.015825 0.071143 -0.052322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_ankle_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.015825 0.071143 -0.052322" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/right_ankle_pitch_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_5_1">
+  <inertial>
+    <origin xyz="0.11240324680884431 -0.3294495104495191 -0.00012376991678422007" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.026709 -0.427249 -0.001937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.026709 -0.427249 -0.001937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_7_1">
+  <inertial>
+    <origin xyz="0.1124032468087001 -0.32944952794404236 -0.00012376997329869308" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.183259 -0.427249 -0.001937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.183259 -0.427249 -0.001937" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_6_1">
+  <inertial>
+    <origin xyz="0.11239325597230554 -0.3294505331902692 -0.0005163589398938461" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.183259 -0.34525 -0.002339" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.183259 -0.34525 -0.002339" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_4_1">
+  <inertial>
+    <origin xyz="0.11240325597238052 -0.3294505104474063 -0.0005263588811385467" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.026709 -0.34525 -0.002339" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.026709 -0.34525 -0.002339" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_0_1">
+  <inertial>
+    <origin xyz="0.009755246761776207 -0.26905028447061785 -0.0010740972954327247" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075929 -0.170968 -0.002896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075929 -0.170968 -0.002896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_1_1">
+  <inertial>
+    <origin xyz="0.009755255923262152 -0.2690492844730439 -0.0006724661682457596" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075929 -0.252967 -0.002495" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075929 -0.252967 -0.002495" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_3_1">
+  <inertial>
+    <origin xyz="0.009755255923190334 -0.26904926180597144 -0.0006724662279636077" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080621 -0.252967 -0.002495" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080621 -0.252967 -0.002495" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_lc_2_1">
+  <inertial>
+    <origin xyz="0.00975524676163178 -0.26905026698000695 -0.001074097352990692" rpy="0 0 0"/>
+    <mass value="1.9027076814591247e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080621 -0.170968 -0.002896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080621 -0.170968 -0.002896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find dummy_loadcell_description)/meshes/dummy_lc_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rotate_13" type="continuous">
+  <origin xyz="0.016264 -0.045144 0.418822" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_hipjoint_abd_1"/>
+  <axis xyz="-0.0 6e-06 -1.0"/>
+</joint>
+
+<joint name="rotate_12" type="continuous">
+  <origin xyz="0.016264 0.044856 0.418822" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_hipjoint_abd_1"/>
+  <axis xyz="-0.0 6e-06 -1.0"/>
+</joint>
+
+<joint name="rotate_11" type="continuous">
+  <origin xyz="-0.04094 1e-06 -0.0665" rpy="0 0 0"/>
+  <parent link="right_hipjoint_abd_1"/>
+  <child link="right_hipjoint_pitch_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="rotate_10" type="continuous">
+  <origin xyz="-0.04094 1e-06 -0.0665" rpy="0 0 0"/>
+  <parent link="left_hipjoint_abd_1"/>
+  <child link="left_hipjoint_pitch_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="rotate_14" type="continuous">
+  <origin xyz="0.0405 0.026 -0.019999" rpy="0 0 0"/>
+  <parent link="left_hipjoint_pitch_1"/>
+  <child link="left_middle_leg_1"/>
+  <axis xyz="-0.0 1.0 9e-06"/>
+</joint>
+
+<joint name="rotate_15" type="continuous">
+  <origin xyz="0.0405 -0.026 -0.02" rpy="0 0 0"/>
+  <parent link="right_hipjoint_pitch_1"/>
+  <child link="right_middle_leg_1"/>
+  <axis xyz="-0.0 -1.0 -2e-06"/>
+</joint>
+
+<joint name="rotate_16" type="continuous">
+  <origin xyz="0.0 1e-06 -0.14" rpy="0 0 0"/>
+  <parent link="left_middle_leg_1"/>
+  <child link="left_lower_leg_1"/>
+  <axis xyz="-0.0 1.0 9e-06"/>
+</joint>
+
+<joint name="rotate_18" type="continuous">
+  <origin xyz="1e-06 1e-06 -0.14" rpy="0 0 0"/>
+  <parent link="left_lower_leg_1"/>
+  <child link="left_ankle_pitch_1"/>
+  <axis xyz="-0.0 1.0 9e-06"/>
+</joint>
+
+<joint name="rotate_21" type="continuous">
+  <origin xyz="-0.0405 0.026 0.02" rpy="0 0 0"/>
+  <parent link="right_ankle_pitch_1"/>
+  <child link="right_foot_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="rotate_20" type="continuous">
+  <origin xyz="-0.0405 -0.026 0.019999" rpy="0 0 0"/>
+  <parent link="left_ankle_pitch_1"/>
+  <child link="left_foot_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="rotate_17" type="continuous">
+  <origin xyz="0.0 0.0 -0.14" rpy="0 0 0"/>
+  <parent link="right_middle_leg_1"/>
+  <child link="right_lower_leg_1"/>
+  <axis xyz="-0.0 -1.0 -2e-06"/>
+</joint>
+
+<joint name="rotate_19" type="continuous">
+  <origin xyz="1e-06 0.0 -0.14" rpy="0 0 0"/>
+  <parent link="right_lower_leg_1"/>
+  <child link="right_ankle_pitch_1"/>
+  <axis xyz="-0.0 -1.0 -2e-06"/>
+</joint>
+
+<joint name="悪端 15" type="fixed">
+  <origin xyz="-0.002034 0.38239 -0.070385" rpy="0 0 0"/>
+  <parent link="left_foot_1"/>
+  <child link="dummy_lc_5_1"/>
+</joint>
+
+<joint name="悪端 16" type="fixed">
+  <origin xyz="-0.158584 0.38239 -0.070385" rpy="0 0 0"/>
+  <parent link="left_foot_1"/>
+  <child link="dummy_lc_7_1"/>
+</joint>
+
+<joint name="悪端 17" type="fixed">
+  <origin xyz="-0.158584 0.300391 -0.069983" rpy="0 0 0"/>
+  <parent link="left_foot_1"/>
+  <child link="dummy_lc_6_1"/>
+</joint>
+
+<joint name="悪端 18" type="fixed">
+  <origin xyz="-0.002034 0.300391 -0.069983" rpy="0 0 0"/>
+  <parent link="left_foot_1"/>
+  <child link="dummy_lc_4_1"/>
+</joint>
+
+<joint name="悪端 19" type="fixed">
+  <origin xyz="0.100604 0.216111 -0.069426" rpy="0 0 0"/>
+  <parent link="right_foot_1"/>
+  <child link="dummy_lc_0_1"/>
+</joint>
+
+<joint name="悪端 20" type="fixed">
+  <origin xyz="0.100604 0.29811 -0.069827" rpy="0 0 0"/>
+  <parent link="right_foot_1"/>
+  <child link="dummy_lc_1_1"/>
+</joint>
+
+<joint name="悪端 21" type="fixed">
+  <origin xyz="-0.055946 0.29811 -0.069827" rpy="0 0 0"/>
+  <parent link="right_foot_1"/>
+  <child link="dummy_lc_3_1"/>
+</joint>
+
+<joint name="悪端 22" type="fixed">
+  <origin xyz="-0.055946 0.216111 -0.069426" rpy="0 0 0"/>
+  <parent link="right_foot_1"/>
+  <child link="dummy_lc_2_1"/>
+</joint>
+
+</robot>
