@@ -529,49 +529,49 @@
   <axis xyz="-0.0 -1.0 -2e-06"/>
 </joint>
 
-<joint name="悪端 15" type="fixed">
+<joint name="rigid_5" type="fixed">
   <origin xyz="-0.002034 0.38239 -0.070385" rpy="0 0 0"/>
   <parent link="left_foot_1"/>
   <child link="dummy_lc_5_1"/>
 </joint>
 
-<joint name="悪端 16" type="fixed">
+<joint name="rigid_7" type="fixed">
   <origin xyz="-0.158584 0.38239 -0.070385" rpy="0 0 0"/>
   <parent link="left_foot_1"/>
   <child link="dummy_lc_7_1"/>
 </joint>
 
-<joint name="悪端 17" type="fixed">
+<joint name="rigid_6" type="fixed">
   <origin xyz="-0.158584 0.300391 -0.069983" rpy="0 0 0"/>
   <parent link="left_foot_1"/>
   <child link="dummy_lc_6_1"/>
 </joint>
 
-<joint name="悪端 18" type="fixed">
+<joint name="rigid_4" type="fixed">
   <origin xyz="-0.002034 0.300391 -0.069983" rpy="0 0 0"/>
   <parent link="left_foot_1"/>
   <child link="dummy_lc_4_1"/>
 </joint>
 
-<joint name="悪端 19" type="fixed">
+<joint name="rigid_0" type="fixed">
   <origin xyz="0.100604 0.216111 -0.069426" rpy="0 0 0"/>
   <parent link="right_foot_1"/>
   <child link="dummy_lc_0_1"/>
 </joint>
 
-<joint name="悪端 20" type="fixed">
+<joint name="rigid_1" type="fixed">
   <origin xyz="0.100604 0.29811 -0.069827" rpy="0 0 0"/>
   <parent link="right_foot_1"/>
   <child link="dummy_lc_1_1"/>
 </joint>
 
-<joint name="悪端 21" type="fixed">
+<joint name="rigid_3" type="fixed">
   <origin xyz="-0.055946 0.29811 -0.069827" rpy="0 0 0"/>
   <parent link="right_foot_1"/>
   <child link="dummy_lc_3_1"/>
 </joint>
 
-<joint name="悪端 22" type="fixed">
+<joint name="rigid_2" type="fixed">
   <origin xyz="-0.055946 0.216111 -0.069426" rpy="0 0 0"/>
   <parent link="right_foot_1"/>
   <child link="dummy_lc_2_1"/>
