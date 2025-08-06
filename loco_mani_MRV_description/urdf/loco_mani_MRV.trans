@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="loco_mani_MRV" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="rotate_waist_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rotate_waist">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rotate_waist_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rotate_1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rotate_1">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rotate_1_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rotate_3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rotate_3">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rotate_3_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rotate_5_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rotate_5">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rotate_5_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

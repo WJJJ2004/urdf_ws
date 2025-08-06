@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<robot name="loco_mani_MRV" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find loco_mani_MRV_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find loco_mani_MRV_description)/urdf/loco_mani_MRV.trans" />
+<xacro:include filename="$(find loco_mani_MRV_description)/urdf/loco_mani_MRV.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-5.061477633745648e-05 -0.0001721355729201868 0.003946875682396339" rpy="0 0 0"/>
+    <mass value="0.03383387831439711"/>
+    <inertia ixx="7e-06" iyy="7e-06" izz="1.4e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="main_body_1">
+  <inertial>
+    <origin xyz="-0.0003613571085252051 -0.043524788325417514 0.07173700468304366" rpy="0 0 0"/>
+    <mass value="1.3481459270185805"/>
+    <inertia ixx="0.006536" iyy="0.004526" izz="0.004074" ixy="-0.000353" iyz="0.001724" ixz="-0.000148"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000195 0.000172 -0.006427" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/main_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000195 0.000172 -0.006427" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/main_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_1">
+  <inertial>
+    <origin xyz="0.006809265016533061 -0.007505450460900093 -0.0013478023359121544" rpy="0 0 0"/>
+    <mass value="0.06483665189618823"/>
+    <inertia ixx="1.3e-05" iyy="2.2e-05" izz="2.4e-05" ixy="-3e-06" iyz="-2e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000195 0.091422 -0.106587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000195 0.091422 -0.106587" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="upperarm_1">
+  <inertial>
+    <origin xyz="0.02253691896116575 -0.06273104876121469 0.00013494305171438126" rpy="0 0 0"/>
+    <mass value="1.056487832985726"/>
+    <inertia ixx="0.00222" iyy="0.00024" izz="0.002222" ixy="-1e-06" iyz="9e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.003698 0.123922 -0.081588" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.003698 0.123922 -0.081588" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1">
+  <inertial>
+    <origin xyz="0.01725436161706603 -0.09475990000797657 -0.02048672328317569" rpy="0 0 0"/>
+    <mass value="0.840821168941668"/>
+    <inertia ixx="0.001728" iyy="0.000565" izz="0.001608" ixy="0.000396" iyz="1e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.018854 0.250122 -0.102135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.018854 0.250122 -0.102135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find loco_mani_MRV_description)/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rotate_waist" type="continuous">
+  <origin xyz="-0.000195 -0.000172 0.006427" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="main_body_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="rotate_1" type="continuous">
+  <origin xyz="0.0 -0.09125 0.10016" rpy="0 0 0"/>
+  <parent link="main_body_1"/>
+  <child link="shoulder_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="rotate_3" type="continuous">
+  <origin xyz="-0.003503 -0.0325 -0.024999" rpy="0 0 0"/>
+  <parent link="shoulder_1"/>
+  <child link="upperarm_1"/>
+  <axis xyz="1.0 -0.0 -0.000117"/>
+</joint>
+
+<joint name="rotate_5" type="continuous">
+  <origin xyz="0.022552 -0.1262 0.020547" rpy="0 0 0"/>
+  <parent link="upperarm_1"/>
+  <child link="forearm_1"/>
+  <axis xyz="0.000117 -0.0 1.0"/>
+</joint>
+
+</robot>
