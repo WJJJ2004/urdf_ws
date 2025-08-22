@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'src_torso_description'
+package_name = 'torso_description'
 
 setup(
     name=package_name,

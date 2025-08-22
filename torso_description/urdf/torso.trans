@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<robot name="src_torso" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="torso" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="rotate_torso_tran">
+<transmission name="rotate_22_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="rotate_torso">
+  <joint name="rotate_22">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="rotate_torso_actr">
+  <actuator name="rotate_22_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
