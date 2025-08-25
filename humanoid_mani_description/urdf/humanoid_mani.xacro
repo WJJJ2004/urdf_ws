@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<robot name="humanoid_mani" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find humanoid_mani_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find humanoid_mani_description)/urdf/humanoid_mani.trans" />
+<xacro:include filename="$(find humanoid_mani_description)/urdf/humanoid_mani.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.00014449795003466327 6.165012944592263e-14 -0.002480473640778647" rpy="0 0 0"/>
+    <mass value="0.03383387831439711"/>
+    <inertia ixx="7e-06" iyy="7e-06" izz="1.4e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="torso_1">
+  <inertial>
+    <origin xyz="-0.012877989784504057 -0.02595890872786548 0.09008175998722667" rpy="0 0 0"/>
+    <mass value="2.1937092001925604"/>
+    <inertia ixx="0.010947" iyy="0.008342" izz="0.007941" ixy="0.000264" iyz="0.000807" ixz="-0.001099"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/torso_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/torso_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="eye_1">
+  <inertial>
+    <origin xyz="5.505110954977244e-07 -4.6964214973910234e-07 0.00020929180740678066" rpy="0 0 0"/>
+    <mass value="1.902707681457099e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.025041 -0.039279 -0.18636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/eye_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.025041 -0.039279 -0.18636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/eye_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_1">
+  <inertial>
+    <origin xyz="-0.0008021063538195136 -0.01263269248673439 -0.002599544084532862" rpy="0 0 0"/>
+    <mass value="0.06721028329114603"/>
+    <inertia ixx="1.7e-05" iyy="2.8e-05" izz="3.3e-05" ixy="-0.0" iyz="-3e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.000708 0.093025 -0.10546" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.000708 0.093025 -0.10546" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="upperarm_1">
+  <inertial>
+    <origin xyz="0.020532400219094592 -0.07168950541218574 -8.737550710166686e-06" rpy="0 0 0"/>
+    <mass value="0.7964005518324352"/>
+    <inertia ixx="0.002858" iyy="0.000163" izz="0.002858" ixy="2e-06" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.022178 0.125525 -0.08046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.022178 0.125525 -0.08046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/upperarm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1">
+  <inertial>
+    <origin xyz="0.018319068322047685 -0.11944378738890721 -0.02034305937007909" rpy="0 0 0"/>
+    <mass value="1.088969578492718"/>
+    <inertia ixx="0.001507" iyy="0.000389" izz="0.001483" ixy="0.000207" iyz="-2e-06" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001628 0.268725 -0.100959" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001628 0.268725 -0.100959" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ee_link_1">
+  <inertial>
+    <origin xyz="-6.218104927793559e-07 1.652572509247552e-05 -0.00011133278533460855" rpy="0 0 0"/>
+    <mass value="1.9027076814554607e-07"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.002772 0.413548 -0.080544" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/ee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.002772 0.413548 -0.080544" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/ee_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Head_1">
+  <inertial>
+    <origin xyz="-0.013469787584827716 -0.015314559330600433 0.03527216999851682" rpy="0 0 0"/>
+    <mass value="0.6173958690072822"/>
+    <inertia ixx="0.00062" iyy="0.000263" izz="0.000484" ixy="-9e-06" iyz="-2.6e-05" ixz="-2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.023041 -0.021316 -0.14636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/Head_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.023041 -0.021316 -0.14636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find humanoid_mani_description)/meshes/Head_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rotate_torso" type="continuous">
+  <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="torso_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="rgb_dummy" type="fixed">
+  <origin xyz="0.002 0.017963 0.04" rpy="0 0 0"/>
+  <parent link="Head_1"/>
+  <child link="eye_1"/>
+</joint>
+
+<joint name="rotate_1" type="continuous">
+  <origin xyz="-0.000708 -0.093025 0.10546" rpy="0 0 0"/>
+  <parent link="torso_1"/>
+  <child link="shoulder_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="rotate_3" type="continuous">
+  <origin xyz="-0.02147 -0.0325 -0.025" rpy="0 0 0"/>
+  <parent link="shoulder_1"/>
+  <child link="upperarm_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="rotate_5" type="continuous">
+  <origin xyz="0.02055 -0.1432 0.020499" rpy="0 0 0"/>
+  <parent link="upperarm_1"/>
+  <child link="forearm_1"/>
+  <axis xyz="0.0 -7e-06 1.0"/>
+</joint>
+
+<joint name="ee_dummy" type="fixed">
+  <origin xyz="0.0044 -0.144823 -0.020415" rpy="0 0 0"/>
+  <parent link="forearm_1"/>
+  <child link="ee_link_1"/>
+</joint>
+
+<joint name="rotate_tilt" type="continuous">
+  <origin xyz="0.023041 0.021316 0.14636" rpy="0 0 0"/>
+  <parent link="torso_1"/>
+  <child link="Head_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>
