@@ -34,23 +34,23 @@
   </actuator>
 </transmission>
 
-<transmission name="rotate_5_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="rotate_5">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="rotate_5_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-
 <transmission name="rotate_tilt_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="rotate_tilt">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="rotate_tilt_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="rotate_5_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="rotate_5">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="rotate_5_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
