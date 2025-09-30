@@ -172,11 +172,12 @@
   </collision>
 </link>
 
-<joint name="rotate_torso" type="continuous">
+<joint name="rotate_torso" type="revolute">
   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="torso_1"/>
   <axis xyz="0.0 -0.0 1.0"/>
+  <limit effort="100.0" lower="-3.1415" upper="3.1415" velocity="1.0"/>
 </joint>
 
 <joint name="rgb_dummy" type="fixed">
@@ -185,35 +186,39 @@
   <child link="eye_1"/>
 </joint>
 
-<joint name="rotate_1" type="continuous">
+<joint name="rotate_1" type="revolute">
   <origin xyz="-0.000642 -0.093026 0.10546" rpy="0 0 0"/>
   <parent link="torso_1"/>
   <child link="shoulder_1"/>
   <axis xyz="0.000712 -1.0 -0.0"/>
+  <limit effort="100.0" lower="-3.1415" upper="3.1415" velocity="1.0"/>
 </joint>
 
-<joint name="rotate_3" type="continuous">
-  <origin xyz="-0.021447 -0.032515 -0.025" rpy="0 0 0"/>
+<joint name="rotate_3" type="revolute">
+  <origin xyz="-0.021447 -0.032515 -0.025" rpy="1.5708 0 0"/>
   <parent link="shoulder_1"/>
   <child link="upperarm_1"/>
-  <axis xyz="1.0 0.000712 -0.0"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit effort="100.0" lower="-1.5708" upper="1.5708" velocity="1.0"/>
 </joint>
 
-<joint name="rotate_tilt" type="continuous">
+<joint name="rotate_tilt" type="revolute">
   <origin xyz="0.023026 0.021333 0.14636" rpy="0 0 0"/>
   <parent link="torso_1"/>
   <child link="Head_1"/>
   <axis xyz="-0.000712 1.0 0.0"/>
+  <limit effort="100.0" lower="0.0" upper="2.225" velocity="1.0"/>
 </joint>
 
-<joint name="rotate_5" type="continuous">
+<joint name="rotate_5" type="revolute">
   <origin xyz="0.020652 -0.143185 0.020499" rpy="0 0 0"/>
   <parent link="upperarm_1"/>
   <child link="forearm_1"/>
   <axis xyz="0.0 -7e-06 1.0"/>
+  <limit effort="100.0" lower="-2.462" upper="2.4" velocity="1.0"/>
 </joint>
 
-<joint name="rigid_dummy" type="fixed">
+<joint name="ee_dummy" type="fixed">
   <origin xyz="0.004518 -0.164819 -0.020415" rpy="0 0 0"/>
   <parent link="forearm_1"/>
   <child link="ee_link_1"/>
